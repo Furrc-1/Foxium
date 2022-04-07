@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "lib/",
+    "types": ["node"],
+    "target": "es2019",
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "module": "esnext",
+    "esModuleInterop": true
+  },
+  "filesGlob": [
+    "src/*.ts"
+  ]
+}

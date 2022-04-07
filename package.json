@@ -1,0 +1,27 @@
+{
+  "name": "foxium",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "description": "VK bots engine (HENTA based `https://github.com/u14-team/HENTA`)",
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "name": "furrc",
+    "url": "vk.com/furrc"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "chalk": "^5.0.1",
+    "emittery": "^0.10.2",
+    "minimist": "^1.2.6",
+    "node-fetch": "^3.2.3",
+    "time-stamp": "^2.2.0",
+    "vk-io": "^4.5.2"
+  }
+}
