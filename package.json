@@ -1,6 +1,6 @@
 {
   "name": "foxium",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "description": "VK bots engine (HENTA based `https://github.com/u14-team/HENTA`)",
   "license": "MIT",

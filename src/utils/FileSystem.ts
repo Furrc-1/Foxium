@@ -8,7 +8,6 @@ export default class FileSystem {
     }
 
     static dirExists(dir: string) {
-        if (!this.isDir(dir)) return false;
         return this.fileExists(dir);
     }
 
