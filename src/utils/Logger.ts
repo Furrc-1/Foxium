@@ -6,12 +6,12 @@ export default class Logger {
     foxium: Foxium
     caller: string;
 
-    timeFormat: string = chalk`{blue [${TimeStamp("HH:mm:ss")}]}`;
-    callerFormat: string = chalk`{white [%CALLER%]}`;
-    logFormat: string = chalk`{green [LOG]} `;
-    warningFormat: string = chalk`{yellow [WARNING]} `;
-    errorFormat: string = chalk`{red [ERROR]} `;
-    infoFormat: string = chalk`{blue [INFO]} `;
+    timeFormat: string = chalk.blue(`[${TimeStamp("HH:mm:ss")}]`);
+    callerFormat: string = `[%CALLER%]`;
+    logFormat: string = chalk.green(`[LOG] `);
+    warningFormat: string = chalk.yellow(`[WARNING] `);
+    errorFormat: string = chalk.red(`[ERROR] `);
+    infoFormat: string = chalk.blue(`[INFO] `);
 
     constructor(foxium: Foxium, caller: string) {
         this.foxium = foxium;

@@ -1,13 +1,12 @@
 {
   "name": "foxium",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "description": "VK bots engine (HENTA based `https://github.com/u14-team/HENTA`)",
   "license": "MIT",
   "type": "module",
   "author": {
-    "name": "furrc",
-    "url": "vk.com/furrc"
+    "name": "furrc"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json"
