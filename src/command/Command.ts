@@ -1,5 +1,5 @@
 import * as readline from 'readline';
-import { Foxium } from '../index';
+import { Foxium } from '../index.js';
 
 export default class Command {
     commands = {};

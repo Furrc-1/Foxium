@@ -1,4 +1,4 @@
-import { Foxium } from '../index';
+import { Foxium } from '../index.js';
 
 export default class Config {
     foxium: Foxium;

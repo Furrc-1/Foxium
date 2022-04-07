@@ -1,7 +1,7 @@
 import { promises as fsAwait } from 'fs';
 import * as fs from 'fs';
 
-import * as Path from "path";
+import * as Path from 'path';
 
 export default class FileSystemAsync {
 

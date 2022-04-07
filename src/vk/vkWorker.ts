@@ -1,5 +1,5 @@
 import * as VKLib from 'vk-io';
-import { Foxium } from '../index';
+import { Foxium } from '../index.js';
 
 const { VK } = VKLib;
 

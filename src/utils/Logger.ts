@@ -1,4 +1,4 @@
-import { Foxium } from '../index';
+import { Foxium } from '../index.js';
 import chalk from 'chalk';
 import TimeStamp from 'time-stamp';
 

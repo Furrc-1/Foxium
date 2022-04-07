@@ -1,4 +1,4 @@
-import { Foxium } from '../index';
+import { Foxium } from '../index.js';
 import * as path from 'path';
 import fetch from 'node-fetch';
 

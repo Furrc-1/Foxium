@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Foxium } from '..';
+import { Foxium } from '../index.js';
 import { PluginMeta } from './PluginsService';
 
 export interface PluginRepository {

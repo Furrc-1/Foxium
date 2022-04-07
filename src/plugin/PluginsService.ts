@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { Foxium } from '../index';
+import { Foxium } from '../index.js';
 import AdmZip from 'adm-zip';
 import os from 'os';
 
