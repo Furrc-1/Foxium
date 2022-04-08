@@ -4,10 +4,9 @@ import TimeStamp from 'time-stamp';
 
 export default class Logger {
     foxium: Foxium
-    caller: string;
 
     timeFormat: string = chalk.blue(`[${TimeStamp("HH:mm:ss")}]`);
-    callerFormat: string = `[%CALLER%]`;
+    callerFormat: string;
     logFormat: string = chalk.green(`[LOG] `);
     warningFormat: string = chalk.yellow(`[WARNING] `);
     errorFormat: string = chalk.red(`[ERROR] `);
@@ -15,13 +14,11 @@ export default class Logger {
 
     constructor(foxium: Foxium, caller: string) {
         this.foxium = foxium;
-        this.caller = caller
+        this.callerFormat = `[${caller}]`;
     }
 
     writeLine(str: string) {
-        const time = this.timeFormat;
-        const caller = this.callerFormat.replace(/%CALLER%/gi, this.caller);
-        process.stdout.write(`${time} ${caller} ${str}\n`);
+        process.stdout.write(`${this.timeFormat} ${this.callerFormat} ${str}\n`);
     }
 
     log(message: string) {
@@ -33,7 +30,7 @@ export default class Logger {
     }
 
     error(message: string) {
-        process.stderr.write(`${this.errorFormat}${message}\n`);
+        process.stderr.write(`${this.timeFormat} ${this.callerFormat} ${this.errorFormat} ${message}\n`);
     }
 
     info(message: string) {

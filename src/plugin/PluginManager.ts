@@ -1,4 +1,3 @@
-import { promises as fs } from 'fs';
 import { execSync } from 'child_process';
 import { Foxium } from '../index';
 
@@ -43,14 +42,14 @@ export default class PluginManager {
             const nodeModulesExist = this.foxium.fileSystem.dirExists(`${pluginPath}/node_modules`);
             if ((packageJson.dependencies || packageJson.devDependencies) && !nodeModulesExist) {
                 this.foxium.warning(`${pluginSlug} not installed dependencies. Installing...`);
-                execSync(`cd src/plugins/${pluginSlug} && yarn`, {stdio: 'inherit'});
+                execSync(`cd plugins/${pluginSlug} && yarn`, {stdio: 'inherit'});
             }
 
             // Check building
             const libExist = this.foxium.fileSystem.dirExists(`${pluginPath}/lib`);
             if (packageJson.scripts && packageJson.scripts.build && !libExist) {
                 this.foxium.warning(`${pluginSlug} not builded. Building...`);
-                execSync(`cd src/plugins/${pluginSlug} && yarn build`, {stdio: 'inherit'});
+                execSync(`cd plugins/${pluginSlug} && yarn build`, {stdio: 'inherit'});
             }
 
             const { default: rawPluginClass } = await import(`file:///${pluginPath}/${packageJson.main}`);
